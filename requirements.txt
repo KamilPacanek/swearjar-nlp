@@ -1,1 +1,6 @@
 Flask==2.0.1
+
+# spaCy (https://spacy.io/)
+spacy==3.0.6
+#en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.0.0/en_core_web_trf-3.0.0-py3-none-any.whl
+pl-core-news-lg @ https://github.com/explosion/spacy-models/releases/download/pl_core_news_lg-3.0.0/pl_core_news_lg-3.0.0-py3-none-any.whl
