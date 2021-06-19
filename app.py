@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request, escape
 import spacy
+import explacy
 
 app = Flask(__name__)
 
@@ -15,8 +16,8 @@ def ping():
 def analyze(lang):
     try:
         text = request.form["s"]
-        doc = nlp[lang](text)
-        print([(w.text, w.pos_) for w in doc])
+        explacy.print_parse_info(nlp[lang], text)
+
         return ""
     except:
         return ""

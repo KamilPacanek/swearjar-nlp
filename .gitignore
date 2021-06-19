@@ -115,6 +115,7 @@ celerybeat.pid
 
 # Environments
 # .env
+.dev/
 dev/
 .env/
 .venv/
@@ -178,5 +179,8 @@ Thumbs.db
 
 pipelines/*
 !pipelines/init.sh
+
+training/*
+!training/init.example.sh
 
 pub/
