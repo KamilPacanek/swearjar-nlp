@@ -1,14 +1,10 @@
 from flask import Flask
 from flask import request, escape
-
-#import en_core_web_trf
-import pl_core_news_lg
-
+import spacy
 
 app = Flask(__name__)
-#nlp_en = en_core_web_trf.load()
-#nlp = {"en" : nlp_en, "pl":nlp_pl}
-nlp_pl = pl_core_news_lg.load()
+
+nlp_pl = spacy.load("pipelines/pl_core_news_sm")
 nlp = { "pl":nlp_pl}
 
 @app.route("/api/ping")
@@ -24,7 +20,3 @@ def analyze(lang):
         return ""
     except:
         return ""
-
-
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
