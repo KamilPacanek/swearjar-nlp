@@ -183,4 +183,7 @@ pipelines/*
 training/*
 !training/init.example.sh
 
+monnies/*.apikey
+monnies/*_tweets.xml
+
 pub/

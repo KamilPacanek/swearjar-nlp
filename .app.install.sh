@@ -8,4 +8,4 @@ fi
 python3 -m venv .dev
 source .dev/bin/activate
 
-pip install flask pandas sklearn
+pip install flask pandas sklearn pyfiglet
